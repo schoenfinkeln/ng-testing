@@ -7,20 +7,33 @@ describe('TextSummaryPipe', () => {
     pipe = new TextSummaryPipe();
   });
 
+  it('should return empty string if input is null', () => {
+    expect(pipe.transform(null)).toBe('');
+  });
+
+  it('should ')
+
+
+
+
+
+
+
+
   it('should return an empty string if input is null', () => {
-    expect (pipe.transform(null)).toEqual('');
+    expect(pipe.transform(null)).toEqual('');
   });
 
   it('should return null if input is undefined', () => {
-    expect (pipe.transform(undefined)).toEqual('');
+    expect(pipe.transform(undefined)).toEqual('');
   });
 
   it('should return empty string if input is an empty string', () => {
-    expect (pipe.transform('')).toEqual('');
+    expect(pipe.transform('')).toEqual('');
   });
 
   it('should return the same string if the length of input is less than the limit', () => {
-    expect (pipe.transform('12345', 5)).toEqual('12345');
+    expect(pipe.transform('12345', 5)).toEqual('12345');
   });
 
   it('should summarize the input if it is longer than the limit', () => {
